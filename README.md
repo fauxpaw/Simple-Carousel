@@ -12,10 +12,12 @@ a) Get the completed project via your terminal by running
 ```shell
  git clone https://github.com/fauxpaw/Simple-Carousel
 ```
+
                       -- or --
 
+
 ```shell
-Click the [Clone or download] button in the upper right corner
+Click the [Clone or download] button at the upper right corner
 ```
 
 b) Copy the SimpleCarousel.swift file at the url below into your project
@@ -26,7 +28,7 @@ https://github.com/fauxpaw/Simple-Carousel/blob/master/SimpleCarouselView/Simple
 
 ## Using
 
-To utilize the Simple Carousel, initialize an instance of the SimpleCarousel class with its custom initializer.
+To utilize the Simple Carousel, you will need an array of objects that are or inherit from UIView. Initialize an instance of the SimpleCarousel class with its custom initializer. See below for an explanation of the arguments in the initializer.
 
 ```shell
 let myCarousel = SimpleCarousel(withCenterPoint: CGPoint(x: 100, y: 100), withRadius: 50, withDuration: 0.7, withResizing: true, withViews: [UIView1, UIView2...etc])
@@ -34,58 +36,78 @@ let myCarousel = SimpleCarousel(withCenterPoint: CGPoint(x: 100, y: 100), withRa
 Afterwards use the instance method Animate(Clockwise: Bool) to move the views in the direction you wish.
 
 ```shell
-let myCarousel.animate(Clockwise: true)
+let myCarousel.animate(clockwise: true)
 ```
 
 ## Customizable Features
 
-What's all the bells and whistles this project can perform?
-* What's the main functionality
-* You can also do another thing
-* If you get really randy, you can even do this
+Moving is great but what else can I do with this?
+* You can change the animation time
+* You can modify the size and location of the carousel via its center point and radius attributes.
+* You can specify if and by how much views should change size when in and not in the foreground.
 
-## Configuration
+## Class initializer Arguments
 
-Here you should write what are all of the configurations a user can enter when
-using the project.
+#### withCenterPoint
+Type: `CGPoint`  
 
-#### Argument 1
-Type: `String`  
-Default: `'default value'`
-
-State what an argument does and how you can use it. If needed, you can provide
-an example below.
+Specifies the location of the center of the Carousel in terms of screen pixels.
 
 Example:
 ```bash
-awesome-project "Some other value"  # Prints "You're nailing this readme!"
+let deviceScreenCenter: CGPoint = UIScreen.main.bounds
+myCarousel.centerPoint = deviceScreenCenter                  #will set the carousel to the center of the screen.
 ```
 
-#### Argument 2
-Type: `Number|Boolean`  
-Default: 100
+#### withRadius
+Type: `CGFloat`
 
-Copy-paste as many of these as you need.
+Example:
+```bash
+let goodValue: CGFloat = deviceScreenCenter.width/2          #will place outermost views at edge of screen.
+myCarousel.radius = goodValue
+```
+
+#### withDuration
+Type: `CGFloat`
+
+Example:
+```bash
+let oneSec: Double = 1.0                                    #will set each animations time to be 1 second.
+myCarousel.animationTime = oneSec
+```
+
+#### withResizing
+Type: `Bool`
+Default: `True`
+
+Example:
+```bash
+myCarousel.resizeViews = no                                #will keep the views scale static as they move
+```
+
+#### withViews
+Type: `[UIView]`
+
+Example:
+```bash
+
+let array = [UIImageView1, UIImageView2, UIImageView3...]                           #will set the current views to animate as the content of 'array'
+myCarousel.objects = array
+```
+
+#### Additional Customization
+
+For more options check the documentation provided in code comments via SimpleCarousel.swift.
 
 ## Contributing
 
-When you publish something open source, one of the greatest motivations is that
-anyone can just jump in and start contributing to your project.
-
-These paragraphs are meant to welcome those kind souls to feel that they are
-needed. You should state something like:
-
-"If you'd like to contribute, please fork the repository and use a feature
-branch. Pull requests are warmly welcome."
-
-If there's anything else the developer needs to know (e.g. the code style
-guide), you should link it here. If there's a lot of things to take into
-consideration, it is common to separate this section to its own file called
-`CONTRIBUTING.md` (or similar). If so, you should say that it exists here.
+If you'd like to contribute, please fork the repository and use a feature
+branch. Pull requests are warmly welcome.
 
 ## Licensing
 
-Copyright (c) <2017> <Michael Sweeney>
+Copyright (c) <2017> Michael Sweeney
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -85,6 +85,8 @@ class SimpleCarousel{
     
     func animate(clockwise: Bool) {
         // Method to call to move views in a horizontal direction determined by the clockwise argument
+        if self.objects.isEmpty { return }
+        
         for view in self.objects {
             
             let currentAngle = self.angleFromPoint(pos: view.center)
