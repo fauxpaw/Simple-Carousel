@@ -3,8 +3,7 @@
 # Simple Carousel
 > Because no thanks to presentation layers...
 
-A brief description of your project, what it is used for and how does life get
-awesome when someone starts to use it.
+Do you need to present content in a rotating circular view? Not having much luck with animation paths and bezier curves? This is the project for you. Short. Sweet. Simple. Carousel.
 
 ## Installing / Getting started
 
@@ -12,12 +11,17 @@ A quick introduction of the minimal setup you need to get a hello world up &
 running.
 
 ```shell
-packagemanager install awesome-project
-awesome-project start
-awesome-project "Do something!"  # prints "Nah."
-```
+To get started:
 
-Here you should say what actually happens when you execute the code above.
+a) Get the completed project by either running
+ git clone https://github.com/fauxpaw/Simple-Carousel via your terminal
+-- or --
+Click the [Clone or download] button in the upper right corner
+
+
+b) Copy the SimpleCarousel.swift file below into your project
+https://github.com/fauxpaw/Simple-Carousel/blob/master/SimpleCarouselView/SimpleCarousel.swift
+```
 
 ## Developing
 
@@ -105,8 +109,22 @@ consideration, it is common to separate this section to its own file called
 
 ## Licensing
 
-One really important part: Give your project a proper license. Here you should
-state what the license is and how to find the text version of the license.
-Something like:
+Copyright (c) <2017> <Michael Sweeney>
 
-"The code in this project is licensed under MIT license."
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
