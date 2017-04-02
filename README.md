@@ -8,16 +8,16 @@ Do you need to present content in a rotating circular view? Not having much luck
 ## Installing / Getting started
 
 Two simple ways to get started.
+
 a) Get the completed project via your terminal by running
+
 ```shell
  git clone https://github.com/fauxpaw/Simple-Carousel
 ```
 
-                      -- or --
-
 
 ```shell
-Click the [Clone or download] button at the upper right corner
+-or- Click the [Clone or download] button at the upper right corner
 ```
 
 b) Copy the SimpleCarousel.swift file at the url below into your project
