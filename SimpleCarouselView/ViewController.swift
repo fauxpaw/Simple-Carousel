@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         }
         
         //to initialize the carousel...
-        self.myCarousel = SimpleCarousel(withCenterPoint: gCarouselCenterPoint, withRadius: gCarouselRadius, withDuration: 0.7, withResizing: true, withViews: array)
+        self.myCarousel = SimpleCarousel(withCenterPoint: gCarouselCenterPoint, withRadius: 50, withDuration: 0.7, withResizing: true, withViews: array)
         
         //5: Play around with various properties and parameters to get the look you want
         

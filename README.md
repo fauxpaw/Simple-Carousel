@@ -7,61 +7,37 @@ Do you need to present content in a rotating circular view? Not having much luck
 
 ## Installing / Getting started
 
-A quick introduction of the minimal setup you need to get a hello world up &
-running.
+Two simple ways to get started.
+a) Get the completed project via your terminal by running
+```shell
+ git clone https://github.com/fauxpaw/Simple-Carousel
+```
+                      -- or --
 
 ```shell
-To get started:
-
-a) Get the completed project by either running
- git clone https://github.com/fauxpaw/Simple-Carousel via your terminal
--- or --
 Click the [Clone or download] button in the upper right corner
+```
 
+b) Copy the SimpleCarousel.swift file at the url below into your project
 
-b) Copy the SimpleCarousel.swift file below into your project
+```shell
 https://github.com/fauxpaw/Simple-Carousel/blob/master/SimpleCarouselView/SimpleCarousel.swift
 ```
 
-## Developing
+## Using
 
-Here's a brief intro about what a developer must do in order to start developing
-the project further:
-
-```shell
-git clone https://github.com/your/awesome-project.git
-cd awesome-project/
-packagemanager install
-```
-
-And state what happens step-by-step.
-
-### Building
-
-If your project needs some additional steps for the developer to build the
-project after some code changes, state them here:
+To utilize the Simple Carousel, initialize an instance of the SimpleCarousel class with its custom initializer.
 
 ```shell
-./configure
-make
-make install
+let myCarousel = SimpleCarousel(withCenterPoint: CGPoint(x: 100, y: 100), withRadius: 50, withDuration: 0.7, withResizing: true, withViews: [UIView1, UIView2...etc])
 ```
-
-Here again you should state what actually happens when the code above gets
-executed.
-
-### Deploying / Publishing
-
-In case there's some step you have to take that publishes this project to a
-server, this is the right time to state it.
+Afterwards use the instance method Animate(Clockwise: Bool) to move the views in the direction you wish.
 
 ```shell
-packagemanager deploy awesome-project -s server.com -u username -p password
+let myCarousel.animate(Clockwise: true)
 ```
 
-And again you'd need to tell what the previous code actually does.
-
-## Features
+## Customizable Features
 
 What's all the bells and whistles this project can perform?
 * What's the main functionality
